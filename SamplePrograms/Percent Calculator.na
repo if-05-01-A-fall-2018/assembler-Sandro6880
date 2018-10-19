@@ -1,0 +1,35 @@
+"Geben Sie eine Zahl ein:"
+inc 8
+
+# print "Geben Sie eine Zahl ein: "
+lit 0
+lit 24
+lit 25
+out 2
+
+# read input from user
+la 0 32
+in 0
+
+# read input from user
+la 0 36
+in 0
+
+inc 12     # reserve space for variables a, b, c
+la 0 40    # load address of a
+lv 0 32    # load value for a
+sto        # store a
+
+la 0 44    # load address of b
+lit 36     # load value for b
+sto        # b
+
+la 0 48    # load address of c
+lv 0 40    # load value of a
+lv 0 44    # load value of b
+div        # a / b
+lit 100    # load value of 100
+mul        # (a / b) * 100
+sto        # store result to c
+
+halt

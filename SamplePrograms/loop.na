@@ -1,0 +1,43 @@
+"Enter how many times you want to have a loop:"
+
+inc 8
+
+# print "Enter how many times you want to have a loop:"
+lit 0
+lit 43
+lit 44
+out 2
+
+#read input
+la 0 32
+la 0 36
+in 0
+
+# count initialization
+la 0 36
+lit 0
+sto
+
+# loop
+.loopStart
+
+# count++
+la 0 36
+lv 0 36
+lit 1
+add
+sto
+
+# count output
+lv 0 36
+lit 1
+out 0
+out 3
+
+# check loop condition
+lv 0 32
+lv 0 36
+rel 2
+fjmp .loopStart
+
+halt
